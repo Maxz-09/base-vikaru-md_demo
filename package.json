@@ -1,0 +1,26 @@
+{
+  "name": "Vikaru-Md",
+  "version": "1.0.4",
+  "description": "Base Wa Bot-Md Pairing Code",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Maxz-09",
+  "license": "MIT",
+  "dependencies": {
+    "@adiwajshing/keyed-db": "^0.2.4",
+    "@hapi/boom": "^10.0.1",
+    "@whiskeysockets/baileys": "latest",
+    "awesome-phonenumber": "^2.64.0",
+    "axios": "^1.6.8",
+    "chalk": "^4.1.1",
+    "crypto": "^1.0.1",
+    "pino": "^7.0.5",
+    "pm2": "^5.3.1",
+    "moment-timezone": "^0.5.34",
+    "jimp": "^0.16.1",
+    "util": "^0.12.4",
+    "y": "^0.3.2"
+  }
+}
