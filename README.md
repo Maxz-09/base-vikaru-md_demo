@@ -1,5 +1,5 @@
 
-#### Purchase to get full access - $30 USD 
+### Purchase to get full access - $30 USD 
 - WhatsApp   : https://wa.me/6289508899033
 
 ##### Buyers Benefits
