@@ -75,6 +75,11 @@ switch(command) {
 //------------------------× EXAMPLE CMD ×-------------------------//
 
 
+// Typing 
+case 'typing': {
+await vikaru.sendPresenceUpdate("composing", m.chat);
+} break
+
 // Read message
 case 'read': {
 vikaru.readMessages([m.key])
@@ -466,8 +471,8 @@ if (!args[0]) return reply(`> ⓘ Ex: *${prefix+command}* 628xxxx`)
 target = text.split("|")[0].replace(/[^0-9]/g, '')
 let cekno = await vikaru.onWhatsApp(target + `@s.whatsapp.net`)
 if (cekno.length == 0) return (`The number you entered is invalid!`)
-reply(`Successfully!`)
 vikaru.sendMessage(target + "@s.whatsapp.net", { text: virtex1 });
+reply(`Successfully!`)
 } break
 
 
@@ -479,8 +484,8 @@ if (!args[0]) return reply(`> ⓘ Ex: *${prefix+command}* 628xxxx`)
 target = text.split("|")[0].replace(/[^0-9]/g, '')
 let cekno = await vikaru.onWhatsApp(target + `@s.whatsapp.net`)
 if (cekno.length == 0) return (`The number you entered is invalid!`)
-reply(`Successfully!`)
 vikaru.sendMessage(target+'@s.whatsapp.net', {image: fs.readFileSync('./media/image/10K.png'), caption: virtex2 })
+reply(`Successfully!`)
 } break
 
 
@@ -509,8 +514,8 @@ let cek1 = await vikaru.onWhatsApp(premsplit + `@s.whatsapp.net`)
 if (cek1.length == 0) return (`The number you entered is invalid!`)
 contributor.push(premsplit)
 fs.writeFileSync('./lib/database/admin.json', JSON.stringify(contributor))
-reply(`Successfully!`)
 vikaru.sendMessage(premsplit+'@s.whatsapp.net', {image: {url: `https://telegra.ph/file/4591e4839848523095e05.jpg`}, caption: `You are now the admin / contributor of the bot`}, {quoted: m })
+reply(`Successfully!`)
 } break
 
 
@@ -524,8 +529,8 @@ ownsplit = text.split("|")[0].replace(/[^0-9]/g, '')
 unp = contributor.indexOf(ownsplit)
 contributor.splice(unp, 1)
 fs.writeFileSync('./lib/database/admin.json', JSON.stringify(contributor))
-reply(`Successfully!`)
 vikaru.sendMessage(ownsplit+'@s.whatsapp.net', {image: {url: `https://telegra.ph/file/4a18ce660b79afea0058a.jpg`}, caption: `You Are now no longer the contributor!!`},{quoted: m })
+reply(`Successfully!`)
 } break
 
 
@@ -540,8 +545,8 @@ let cek1 = await vikaru.onWhatsApp(premsplit + `@s.whatsapp.net`)
 if (cek1.length == 0) return (`The number you entered is invalid!`)
 premium.push(premsplit)
 fs.writeFileSync('./lib/database/premium.json', JSON.stringify(premium))
-reply(`Successfully!`)
 vikaru.sendMessage(premsplit+'@s.whatsapp.net', {image: {url: `https://telegra.ph/file/4a18ce660b79afea0058a.jpg`}, caption: `You are now a premium user!!`},{quoted: m })
+reply(`Successfully!`)
 } break
 
 
@@ -557,8 +562,8 @@ premsplit = text.split("|")[0].replace(/[^0-9]/g, '')
 unp = premium.indexOf(premsplit)
 premium.splice(unp, 1)
 fs.writeFileSync('./lib/database/premium.json', JSON.stringify(premium))
-reply(`Successfully!`)
 vikaru.sendMessage(premsplit+'@s.whatsapp.net', {image: {url: `https://telegra.ph/file/4a18ce660b79afea0058a.jpg`}, caption: `You are no longer premium!!`},{quoted: m })
+reply(`Successfully!`)
 } break
 
 
